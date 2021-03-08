@@ -10,7 +10,7 @@
           = render :partial => "updates/more"
         - unless @last_page
           .text-center
-            = link_to updates_path(page: 2, project_id: @project.try(:id)), id: 'load-more-link', class: 'btn btn-default', remote: true do
+            = link_to updates_path(page: 2, project_id: @project.try(:id), user_id: @user.try(:id)), id: 'load-more-link', class: 'btn btn-default', remote: true do
               %i.fa.fa-chevron-circle-down
               Load More Updates
       .modal-footer#modal-bottom
